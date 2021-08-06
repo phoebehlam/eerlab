@@ -8,8 +8,8 @@
 #' 
 #' @export
 sktcal <- function (biolab1, anslab1, biolab2, anslab2) {
-  a<-matrix(c(biolab1, biolab2,1, 1),nrow=2)
-  b<-matrix(c(anslab1, anslab2), nrow=2)
+  a<-matrix(c(anslab1, anslab2,1, 1),nrow=2)
+  b<-matrix(c(biolab1, biolab2), nrow=2)
   ans<-solve(a, b)
   rownames(ans) <- c("slope", "intercept")
   return(ans)
